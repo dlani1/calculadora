@@ -1,0 +1,81 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content" [fullscreen]="true">
+  <ion-text color="primary" class="ion-text-center">
+    <h1 class="titulo">CALCULADORA</h1>
+</ion-text>
+
+<ion-grid fixed>
+  <ion-row>
+    <ion-col class="priemrdigito">Inserta el primer digito :</ion-col>
+    <ion-col size="8">
+      <input class="prueba" type="number"[(ngModel)]="n1">
+    </ion-col>
+  </ion-row>
+  
+  <ion-row>
+    <ion-col class="segundodigito">Inserta el segundo digito :</ion-col>
+    <ion-col size="8">
+      <input class="prueba2" type="number"[(ngModel)]="n2">
+    </ion-col>
+  </ion-row>
+  <ion-row class="respuestaa">
+    <ion-col class="resultado">Resultado :</ion-col>
+    <ion-col class="resultado3">{{resultado}}</ion-col>
+  </ion-row>
+  <ion-row class="signos"> 
+    <ion-col >
+      <ion-button class="sumar" color="rosa" (click)="sumar()" expand="block">
+        <ion-icon class="sumar2" slot="icon-only" name="add"></ion-icon>
+      </ion-button>
+    </ion-col>
+    <ion-col size="6">
+      <ion-button  color="rosa"  class="restar" (click)="restar()" expand="block" >
+        <ion-icon  class="restar2" slot="icon-only" name="remove"></ion-icon>
+      </ion-button>
+    </ion-col>
+    
+    <ion-col size="6">
+      <ion-button color="rosa"  class="multiplicarr" (click)="multiplicar()" expand="block">
+        <ion-icon class="multiplicar2" slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-col>
+    
+    <ion-col size="6">
+      <ion-button color="rosa"  class="dividirr" (click)="dividir()" expand="block">
+        <ion-icon class="dividir2" slot="icon-only" name="pencil"></ion-icon>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+
+  <div class="niña">
+    <img  src="../../assets/imagen/niña.png" alt="">
+    </div>
+
+    <div class="fresa">
+      <img src="../../assets/imagen/fresa.png" alt="">
+    </div>
+
+    <div class="tulipan">
+      <img src="../../assets/imagen/tulipan.png" alt="">
+    </div>
+    <div class="fresa1">
+      <img src="../../assets/imagen/fresa.png" alt="">
+    </div>
+
+    <div class="tulipan1">
+      <img src="../../assets/imagen/tulipan.png" alt="">
+    </div>
+
+    <div class="fresa2">
+      <img src="../../assets/imagen/fresa.png" alt="">
+    </div>
+    <div class="tulipan2">
+      <img src="../../assets/imagen/tulipan.png" alt="">
+    </div>
+</ion-grid>
+</ion-content>
